@@ -1,29 +1,33 @@
 # Express SSR TypeScript Web Component Example
 
-This repository is a base project demonstrating the integration of Express, Server-Side Rendering (SSR), and TypeScript with Web Components.
+This repository is a base project demonstrating the integration of Express, Server-Side Rendering (SSR), Tailwind, and TypeScript with Web Components.
 
 ## Features
 
 - **Express**: A minimal and flexible Node.js web application framework.
 - **Server-Side Rendering (SSR)**: Serve HTML content generated on the server.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
+- **Tailwind**: For CSS styling
 - **Web Components**: Reusable custom elements with encapsulated functionality.
 
 ## Project Structure
 
 ```
 ├── public
-│   ├── about
-│   │   └── index.html
-│   └── styles.css
-│   └── index.html
 ├── src
-│   ├── components
-│   │   └── test-component.ts
-│   ├── router
+│   ├── js
+│   │   └── increment-number-button.ts
+│   ├── routers
 │   │   ├── api.ts
 │   │   └── web.ts
+│   └── app.ts
 │   └── server.ts
+│   └── styles.css
+├── views
+│   ├── partials
+│   │   └── footer.ejs
+│   │   └── navbar.ejs
+│   └── index.ejs
 ├── package.json
 └── tsconfig.json
 ```
@@ -58,27 +62,3 @@ This repository is a base project demonstrating the integration of Express, Serv
    ```
 
 2. Open your browser and navigate to `http://localhost:3000`.
-
-### Available Scripts
-
-- `npm run dev`: Start the development server with hot reloading.
-- `npm run build`: Build the project for production.
-- `npm start`: Start the production server.
-
-## Usage
-
-### API Endpoints
-
-- `POST /api/increment`: Increment a number and return the updated value.
-- `GET /`: Serve the main HTML page.
-- `GET /components/*`: Serve web component files.
-
-### Web Components
-
-#### TestComponent
-
-A custom web component that displays a number and provides buttons to change the text color and increment the number.
-
-```html
-<test-component></test-component>
-```
