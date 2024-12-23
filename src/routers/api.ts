@@ -5,7 +5,8 @@ const router: Router = Router();
 let number = 0;
 
 router.post("/increment", (req: Request, res: Response) => {
-  number += 1;
+  const currentNumber = req.body.currentNumber;
+  number = currentNumber + 1;
   res.json({ number });
 });
 
