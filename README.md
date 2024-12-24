@@ -44,7 +44,7 @@ This repository is a base project demonstrating the integration of Express, Serv
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/express-wc.git
+   git clone https://github.com/zhanmu-tw/express-wc.git
    cd express-wc
    ```
 
